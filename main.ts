@@ -4,6 +4,7 @@ input.onButtonPressed(Button.A, function () {
 input.onButtonPressed(Button.B, function () {
     radio.sendString("L")
 })
+radio.setGroup(1)
 basic.showString("Hello!")
 basic.showString("A for RIGHT!")
 basic.showString("B for LEFT!")
