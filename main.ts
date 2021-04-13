@@ -1,6 +1,6 @@
 function SendProgram () {
     for (let index = 0; index <= program.length - 1; index++) {
-        radio.sendString(program.substr(0, 10))
+        radio.sendString(program.substr(index, 1))
     }
     program = ""
 }
@@ -23,7 +23,6 @@ input.onButtonPressed(Button.A, function () {
         `)
 })
 input.onButtonPressed(Button.B, function () {
-    radio.sendString("L")
     basic.showLeds(`
         . . . . .
         . . # . #
