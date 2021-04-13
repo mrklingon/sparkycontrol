@@ -13,6 +13,14 @@ input.onButtonPressed(Button.A, function () {
         . . . . .
         `)
     program = "" + program + "R"
+    basic.pause(100)
+    basic.showLeds(`
+        . . . . .
+        . # . # .
+        . . . . .
+        . # # # .
+        . . . . .
+        `)
 })
 input.onButtonPressed(Button.B, function () {
     radio.sendString("L")
@@ -24,6 +32,14 @@ input.onButtonPressed(Button.B, function () {
         . . . . .
         `)
     program = "" + program + "L"
+    basic.pause(100)
+    basic.showLeds(`
+        . . . . .
+        . # . # .
+        . . . . .
+        . # # # .
+        . . . . .
+        `)
 })
 input.onGesture(Gesture.Shake, function () {
     program = ""
@@ -31,8 +47,6 @@ input.onGesture(Gesture.Shake, function () {
 let program = ""
 radio.setGroup(1)
 basic.showString("Hello!")
-basic.showString("A for RIGHT!")
-basic.showString("B for LEFT!")
 basic.showLeds(`
     . . . . .
     . # . # .
